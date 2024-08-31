@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<link th:href="@{main.css}" rel="stylesheet" />
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+<h2>Home page </h2>
+<form th:action ="@{/welcome}" th:object = "${students}" method = "POST">
+<input type ="text" th:field = "*{name1}" placeholder = "Enter your First Name">
+<input type ="text" th:field = "*{name2}" placeholder = "Enter your Last Name">
+<br>
+<input type = "submit" value = "submit">
+</form>   
+</body>
+</html>
+
